@@ -1,33 +1,54 @@
 import React from 'react';
-
+import {Navbar} from "./navbar"
+import {Search} from './search';
+import Shelf from "./shelf"
+import List from "./list"
+import ListItem from "./listitem"
+const movies = [
+  {
+    id: 1,
+    title: "EIn Soldat",
+    rating: "PG-13",
+    starRating: 1.23,
+    year: 2023,
+    genre: "Action",
+    runtime: "11:11h",
+    cast: "Jack Ryan"
+  },
+  {
+    id: 1,
+    title: "EIn Soldat",
+    rating: "PG-13",
+    starRating: 1.23,
+    year: 2023,
+    genre: "Action",
+    runtime: "11:11h",
+    cast: "Jack Ryan"
+  },
+  {
+    id: 1,
+    title: "EIn Soldat",
+    rating: "PG-13",
+    starRating: 1.23,
+    year: 2023,
+    genre: "Action",
+    runtime: "11:11h",
+    cast: "Jack Ryan"
+  },
+  
+]
 function App() {
   return (
-    <div className="flex flex-col h-full items-center justify-center bg-gray-200 text-gray-700">
-      <div className="flex items-center">
-        <h1 className="text-6xl font-thin tracking-wider">Create React App + Tailwind CSS</h1>
-      </div>
-      <p className="my-6 tracking-wide">
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <div className="mt-6 flex justify-center">
-        <a
-          className="uppercase hover:underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="ml-10 uppercase hover:underline"
-          href="https://tailwindcss.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Tailwind
-        </a>
-      </div>
-    </div>
+    <>
+    <Navbar/>
+    <Search/>
+    <Shelf/>
+    <List>
+      {movies.map((movie) => (
+        <ListItem key={movie.id} movie={movie} />
+      ))}
+    </List>
+    </>
   );
 }
 
