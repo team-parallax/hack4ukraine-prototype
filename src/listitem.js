@@ -1,10 +1,16 @@
+import { SmallBadge } from "./badge";
+import VoteButtons from "./vote"
+
 export default function ListItem({ movie }) {
     return (
-      <article className="flex items-start space-x-6 p-6">
-        <img src={movie.image} alt="" width="60" height="88" className="flex-none rounded-md bg-slate-100" />
+      <article className="flex items-start space-x-3 p-3">
+        <div className="flex flex-row items-center justify-center h-full">
+            <VoteButtons rating={movie.starRating} />
+        </div>
         <div className="min-w-0 relative flex-auto">
-          <h2 className="font-semibold text-slate-900 truncate pr-20">{movie.title}</h2>
-          <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+          <h2 className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
+          <dl className="flex flex-wrap text-sm leading-6 font-medium">
+            {/*
             <div className="absolute top-0 right-0 flex items-center space-x-1">
               <dt className="text-sky-500">
                 <span className="sr-only">Star rating</span>
@@ -14,35 +20,27 @@ export default function ListItem({ movie }) {
               </dt>
               <dd>{movie.starRating}</dd>
             </div>
-            <div>
-              <dt className="sr-only">Rating</dt>
-              <dd className="px-1.5 ring-1 ring-slate-200 rounded">{movie.rating}</dd>
+            */}
+            
+            
+            <div className="absolute top-0 right-0 flex items-center space-x-1">
+                { movie.isHot ?"🔥" :""}
+                { movie.isPinned ?"📌" :""}
             </div>
-            <div className="ml-2">
-              <dt className="sr-only">Year</dt>
-              <dd>{movie.year}</dd>
+            {/*
+            <div className=" mb-2">
+                <span  className="text-slate-400 text-sm leading-1">
+                    There are many variations of passages of Lorem Ipsum available.
+                </span>
             </div>
-            <div>
-              <dt className="sr-only">Genre</dt>
-              <dd className="flex items-center">
-                <svg width="2" height="2" fill="currentColor" className="mx-2 text-slate-300" aria-hidden="true">
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
-                {movie.genre}
-              </dd>
+            */}
+            {/*
+            <div className="flex-none w-full pt-1 pb-2 font-normal">
+              
             </div>
-            <div>
-              <dt className="sr-only">Runtime</dt>
-              <dd className="flex items-center">
-                <svg width="2" height="2" fill="currentColor" className="mx-2 text-slate-300" aria-hidden="true">
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
-                {movie.runtime}
-              </dd>
-            </div>
-            <div className="flex-none w-full mt-2 font-normal">
-              <dt className="sr-only">Cast</dt>
-              <dd className="text-slate-400">{movie.cast}</dd>
+            */}
+            <div className="flex mt-2">
+                <dd className="text-slate-400 text-xs">{movie.date}</dd> {movie.rating.map(r => (<SmallBadge emoji={r.emoji} text={r.text}/>))}
             </div>
           </dl>
         </div>

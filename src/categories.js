@@ -8,6 +8,10 @@ export const categories = [
       text: "School"
     },
     {
+      emoji: "🏠",
+      text: "Wohnen"
+    },
+    {
       emoji: "👩‍💼",
       text: "Work"
     },
@@ -38,6 +42,14 @@ export const categories = [
     {
       emoji: "🤝",
       text: "Networking"
+    },
+    {
+        emoji: "🍕",
+        text: "Lebensmittel"
+    },
+    {
+      emoji: "💸",
+      text: "Free"
     },
     {
       emoji: "🗣️",

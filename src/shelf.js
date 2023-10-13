@@ -11,8 +11,9 @@ const Shelf = () => {
             {categories.map(category => (<Badge text={category.text} emoji={category.emoji}/>))}
           
         </div>
+        <div className="pt-6"></div>
         <button
-          className="absolute bottom-0 text-lg z-10 transform transition-transform duration-300 ease-in-out"
+          className="absolute bottom-0 left-[45%] bg-slate-300 text-white rounded-full text-lg z-10 transform transition-transform duration-300 ease-in-out"
           onClick={() => setIsOpen(!isOpen)}
           style={{ bottom: isOpen ? '0' : '-1rem', transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}
         >
