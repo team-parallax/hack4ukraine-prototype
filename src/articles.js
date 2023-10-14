@@ -24,17 +24,17 @@ export const moviesUa = [
         comments: [
             {
                 id: 1,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(10),
                 userName: faker.internet.userName()
             },
             {
                 id: 2,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(10),
                 userName: faker.internet.userName()
             },
             {
                 id: 3,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(10),
                 userName: faker.internet.userName()
             },
         ]
@@ -153,21 +153,24 @@ export const moviesDe = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr",
         // location: "Ulm/Neu-Ulm",
         comments: [
             {
                 id: 1,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(5),
                 userName: faker.internet.userName()
             },
             {
                 id: 2,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(6),
                 userName: faker.internet.userName()
             },
             {
                 id: 3,
-                text: faker.lorem.lines(1),
+                text: faker.lorem.words(10),
                 userName: faker.internet.userName()
             },
         ]
@@ -299,8 +302,10 @@ export const moviesEn = [
         ],
         isPinned: true,
         starRating: 13,
-        date: "23.07.2023",
-        // location: "Ulm/Neu-Ulm",
+        date: "2.08.2023",
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr",
         comments: [
             {
                 id: 1,
@@ -434,7 +439,6 @@ export const Articles = () => {
     } = useStateValue()
     const [filteredArticles, setFilteredArticles] = useState(getMovies(state.language))
     useEffect(() => {
-        console.log("state.labelEmoji", state.labelEmoji);
         setFilteredArticles((getMovies(state.language))
             .filter(article => state.searchString ?
                 article.title.toLocaleLowerCase().includes(state.searchString)
