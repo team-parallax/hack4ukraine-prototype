@@ -54,7 +54,9 @@ export const moviesUa = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,
@@ -166,7 +168,9 @@ export const moviesDe = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,
@@ -274,7 +278,9 @@ export const moviesEn = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,

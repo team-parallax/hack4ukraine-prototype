@@ -13,7 +13,7 @@ export const SmallBadge = ({
     text,
     emoji
 }) => (
-    <dd className="px-1.5 ring-1 ring-slate-200 rounded-xs mx-1 text-xs whitespace-nowrap overflow-hidden inline-block mb-1">
+    <dd className="pr-1.5 ring-1 ring-slate-200 rounded-xs mr-1 text-xs whitespace-nowrap overflow-hidden inline-block mb-1">
         {emoji && <span
             className="mr-1"
         >{emoji}</span>}

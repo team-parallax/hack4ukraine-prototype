@@ -1,24 +1,26 @@
-import { SmallBadge } from "./badge";
+import {SmallBadge} from "./badge";
 import VoteButtons from "./vote"
 import {useStateValue} from "./state"
-export default function ListItem({ movie }) {
+import {ar} from "@faker-js/faker";
+
+export default function ListItem({movie}) {
     const {
         state, setState
     } = useStateValue()
     return (
-      <article
-        className="flex items-start space-x-3 p-3">
-        <div className="flex flex-row items-center justify-center h-full">
-            <VoteButtons rating={movie.starRating} />
-        </div>
-        <div className="min-w-0 relative flex-auto">
-          <h2
-            onClick={() => {
-                setState(state => ({...state, showArticle: movie, currentPage: "article"}))
-            }}
-          className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
-          <dl className="flex flex-wrap text-sm leading-6 font-medium">
-            {/*
+        <article
+            className="flex items-start space-x-3 p-3">
+            <div className="flex flex-row items-center justify-center h-full">
+                <VoteButtons rating={movie.starRating}/>
+            </div>
+            <div className="min-w-0 relative flex-auto">
+                <h2
+                    onClick={() => {
+                        setState(state => ({...state, showArticle: movie, currentPage: "article"}))
+                    }}
+                    className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
+                <dl className="flex flex-wrap text-sm leading-6 font-medium">
+                    {/*
             <div className="absolute top-0 right-0 flex items-center space-x-1">
               <dt className="text-sky-500">
                 <span className="sr-only">Star rating</span>
@@ -31,27 +33,29 @@ export default function ListItem({ movie }) {
             */}
 
 
-            <div className="absolute top-0 right-0 flex items-center space-x-1">
-                { movie.isHot ?"🔥" :""}
-                { movie.isPinned ?"📌" :""}
-            </div>
-            {/*
+                    <div className="absolute top-0 right-0 flex items-center space-x-1">
+                        {movie.isHot ? "🔥" : ""}
+                        {movie.isPinned ? "📌" : ""}
+                    </div>
+                    {/*
             <div className=" mb-2">
                 <span  className="text-slate-400 text-sm leading-1">
                     There are many variations of passages of Lorem Ipsum available.
                 </span>
             </div>
             */}
-            {/*
+                    {/*
             <div className="flex-none w-full pt-1 pb-2 font-normal">
 
             </div>
             */}
-            <div className="flex flex-wrap mt-2">
-                <dd className="text-slate-400 text-xs">{movie.date}</dd> {movie.rating.map(r => (<SmallBadge emoji={r.emoji} text={r.text}/>))}
+                    <div className="flex flex-col flex-wrap mt-1">
+                        <dd className="text-slate-400 text-xs">{movie.location ? `${movie.location}, ` : ""}{movie.date}{movie.openingHours ? `, ${movie.openingHours}` : ""}</dd>
+                        <dd className="mt-1 text-slate-400 text-xs">{movie.rating.map(r => (
+                            <SmallBadge emoji={r.emoji} text={r.text}/>))}</dd>
+                    </div>
+                </dl>
             </div>
-          </dl>
-        </div>
-      </article>
+        </article>
     )
-  }
+}
