@@ -9,13 +9,13 @@ export const Navbar = () => {
     } = useStateValue()
     return (
         <nav
-            class="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+            class="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 lg:flex-wrap lg:justify-start lg:py-4">
             <div class="flex w-full flex-wrap items-center justify-between px-3">
                 <button
                     onClick={() => {
                         setState(state => ({...state, showArticle:undefined, currentPage: "articles"}))
                     }}
-                    class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                    class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
                     type="button"
                     data-te-collapse-init
                     data-te-target="#navbarSupportedContent12"
@@ -41,7 +41,7 @@ export const Navbar = () => {
                     id="navbarSupportedContent12"
                     data-te-collapse-item>
                     <a
-                        class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                        class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
                         href="#">
                         <img
                             src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
@@ -56,7 +56,7 @@ export const Navbar = () => {
                         data-te-navbar-nav-ref>
                         <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                             <a
-                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  [&.active]:text-black/90"
                                 href="#"
                                 data-te-nav-link-ref
                             >Dashboard</a
@@ -64,7 +64,7 @@ export const Navbar = () => {
                         </li>
                         <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                             <a
-                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  [&.active]:text-black/90"
                                 href="#"
                                 data-te-nav-link-ref
                             >Team</a
@@ -72,7 +72,7 @@ export const Navbar = () => {
                         </li>
                         <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                             <a
-                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                                class="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 "
                                 href="#"
                                 data-te-nav-link-ref
                             >Projects</a

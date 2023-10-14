@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Badge } from "./badge";
 import { categories } from "./categories";
+import {useStateValue} from "./state";
 const Shelf = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="relative flex flex-col items-center">
       <div className={`relative transition-max-h duration-300 ease-in-out ${isOpen ? 'max-h-[400px]' : 'max-h-0'}`}>
         <div className={`h-64 m-1 overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             {categories.map(category => (<Badge text={category.text} emoji={category.emoji}/>))}
-          
+
         </div>
         <div className="pt-2"></div>
         <button

@@ -370,13 +370,15 @@ export const Articles = () => {
     } = useStateValue()
     const [filteredArticles, setFilteredArticles] = useState(getMovies(state.language))
     useEffect(() => {
+        console.log("state.labelEmoji", state.labelEmoji);
         setFilteredArticles((getMovies(state.language))
             .filter(article => state.searchString ?
                 article.title.toLocaleLowerCase().includes(state.searchString)
                 || article.rating.find(r => r.text.toLocaleLowerCase().includes(state.searchString))
                 : true)
-            .filter(a => a.location ? a.location === state.location : true))
-    }, [state.searchString, state.language, state.location])
+            .filter(a => a.location ? a.location === state.location : true)
+            .filter(a => state.labelEmoji.length ? state.labelEmoji.some(emoji => a.rating.map(r => r.emoji).includes(emoji)) : true))
+    }, [state.searchString, state.language, state.location, state.labelEmoji])
     return (
         <List>
             {filteredArticles
