@@ -18,12 +18,15 @@ function App() {
 
       <div className='sticky top-0 z-50 bg-white'>
         <Navbar/>
-        { state.currentPage === "article" || state.currentPage === "tour" ? null:(
-          <>
-              <Banner
+          { state.currentPage !== "tour"
+            ? <Banner
                   showBanner={showBanner}
                   closeBannerHandler={() => setShowBanner(false)}
               />
+              : null
+          }
+        { state.currentPage === "article" || state.currentPage === "tour" ? null:(
+          <>
             <Search/>
             <Shelf/>
           </>

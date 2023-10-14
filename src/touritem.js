@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {moviesDe} from "./articles";
 import {useStateValue} from "./state";
+import {SmallBadge} from "./badge";
 export const Touritem = ({
     title,
     subTitle,
@@ -33,14 +34,16 @@ export const Touritem = ({
                 </svg>
             ):icon  }
           </span>
-            <div onClick={() => {
-                setState(state => ({...state, showArticle: moviesDe[0], currentPage: "article"}))
-            }} className={`flex flex-col flex-1 gap-0 ${checked ? "line-through" : ''}`}>
-                <h4 className="text-sm font-medium text-slate-700">
+            <div className={`flex flex-col flex-1 gap-0 ${checked ? "line-through" : ''}`}>
+                <h4
+                    onClick={() => {
+                        setState(state => ({...state, showArticle: moviesDe[0], currentPage: "article"}))
+                    }}
+                    className="text-sm font-medium text-slate-700">
                     {" "}
                     {index + 1}{". "}{title}{" "}
                 </h4>
-                {subTitle && <p className="text-xs text-slate-500">13:12pm</p>}
+                {subTitle && <p  onClick={handleToggle} className="text-xs text-slate-500">{subTitle}</p>}
             </div>
         </li>
     )
