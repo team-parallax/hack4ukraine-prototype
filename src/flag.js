@@ -3,8 +3,8 @@ import {useStateValue} from "./state"
 const getFlag = (lang) => {
     switch (lang) {
         case "de": return "🇩🇪"
-        case "en": return "🇺🇦"
-        case "ua": return "🇺🇸"
+        case "ua": return "🇺🇦"
+        case "en": return "🇺🇸"
     }
 }
 
@@ -41,7 +41,7 @@ export const Flag = () => {
             </span>
           </a>
           <ul
-            className={`absolute right-0 right-auto z-[1000] float-left m-0 min-w-[10rem] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-zinc-700 [&[data-te-dropdown-show]]:block ${open ? "": "hidden"}` }
+            className={`absolute left-0 z-[1000] float-left m-0 list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-zinc-700 [&[data-te-dropdown-show]]:block ${open ? "": "hidden"}` }
             aria-labelledby="navbarDropdown"
             data-te-dropdown-menu-ref>
             <li>
@@ -58,7 +58,7 @@ export const Flag = () => {
                   <span
                     class="inline-block h-[11px] w-4 content-[''] ">🇩🇪</span>
                 </span>
-                <span class="mr-4">Deutsch</span>
+                {/*<span class="mr-4">DE</span>*/}
                 {state.language === "de" ? <span
                   class="inline-block fill-green-600 dark:fill-gray-200 [&>svg]:h-3.5 [&>svg]:w-3.5">
                   <svg
@@ -85,7 +85,7 @@ export const Flag = () => {
                   <span
                     class="inline-block h-[11px] w-4 content-[''] ">🇺🇦</span>
                 </span>
-                <span class="mr-4">українська мова</span>
+                {/*<span class="mr-4">UA</span>*/}
                 
                 {state.language === "ua" ? <span
                   class="inline-block fill-green-600 dark:fill-gray-200 [&>svg]:h-3.5 [&>svg]:w-3.5">
@@ -113,7 +113,7 @@ export const Flag = () => {
                   <span
                       className="inline-block h-[11px] w-4 content-[''] ">🇺🇸</span>
                 </span>
-                      <span className="mr-4">English</span>
+                      {/*<span className="mr-4">EN</span>*/}
 
                       {state.language === "en" ? <span
                           className="inline-block fill-green-600 dark:fill-gray-200 [&>svg]:h-3.5 [&>svg]:w-3.5">
