@@ -188,7 +188,7 @@ function App() {
 } = useStateValue()
   const [filteredArticles, setFilteredArticles] = useState(state.language === "de" ? moviesDe : moviesUa)
   useEffect(() => {
-    setFilteredArticles(state.language === "de" ? moviesDe : moviesUa
+    setFilteredArticles((state.language === "de" ? moviesDe : moviesUa)
       .filter(article => state.searchString ?
         article.title.toLocaleLowerCase().includes(state.searchString)
         || article.rating.find(r => r.text.toLocaleLowerCase().includes(state.searchString))

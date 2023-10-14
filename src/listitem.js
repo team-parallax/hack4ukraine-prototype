@@ -39,7 +39,7 @@ export default function ListItem({ movie }) {
               
             </div>
             */}
-            <div className="flex mt-2">
+            <div className="flex flex-wrap mt-2">
                 <dd className="text-slate-400 text-xs">{movie.date}</dd> {movie.rating.map(r => (<SmallBadge emoji={r.emoji} text={r.text}/>))}
             </div>
           </dl>

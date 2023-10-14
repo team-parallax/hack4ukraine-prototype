@@ -6,17 +6,17 @@ export const Badge = ({
         {emoji && <span
             className="mr-1"
         >{emoji}</span>}
-        {text}
+        <span>{text}</span>
     </span>
 )
 export const SmallBadge = ({
     text,
     emoji
 }) => (
-    <dd className="px-1.5 ring-1 ring-slate-200 rounded-xs mx-1 text-xs">
+    <dd className="px-1.5 ring-1 ring-slate-200 rounded-xs mx-1 text-xs whitespace-nowrap overflow-hidden inline-block mb-1">
         {emoji && <span
             className="mr-1"
         >{emoji}</span>}
-        {text}
+        <span>{text}</span>
     </dd>
 )
