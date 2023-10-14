@@ -1,5 +1,12 @@
 import {faker} from "@faker-js/faker"
 
+const avatars  = [
+    "https://cdn.iconscout.com/icon/free/png-512/free-avatar-370-456322.png?f=webp&w=512",
+    "https://cdn.iconscout.com/icon/free/png-512/free-avatar-373-456325.png?f=webp&w=512",
+    "https://cdn.iconscout.com/icon/premium/png-512-thumb/avatar-136-116502.png?f=webp&w=512",
+    "https://cdn.iconscout.com/icon/premium/png-512-thumb/avatar-37-116395.png?f=webp&w=512"
+]
+
 export const Article = ({article}) => {
     return (
         <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
@@ -55,11 +62,11 @@ export const Article = ({article}) => {
             <div class="mt-1">
                 <p class="ml-2 mb-1">Diskussion:</p>
                 {
-                    article.comments?.map(comment => (
-                        <div class="p-2 ml-3 mr-3 border border-solid">
+                    article.comments?.map((comment,index) => (
+                        <div class="p-2 ml-3 mr-3">
                             <div class={"flex flex-row"}>
                                 <img
-                                    src={`https://tecdn.b-cdn.net/img/new/avatars/${comment.id}.jpg`}
+                                    src={avatars[index] ?? avatars[0]}
                                     className="rounded-full mr-1"
                                     style={{
                                         height: "25px",
