@@ -49,7 +49,7 @@ export default function ListItem({ movie }) {
             </div>
             */}
                     <div className="flex flex-col flex-wrap mt-1">
-                        <dd className="text-slate-400 text-xs">{movie.location ? `${movie.location}, ` : ""}{movie.date}{movie.openingHours ? `, ${movie.openingHours}` : ""}</dd>
+                        <dd className="text-slate-400 text-xs">{movie.location ? `${movie.location}, ` : ""}{movie.date}<br/>{movie.address ? `${movie.address}`: ""}{movie.openingHours ? `, ${movie.openingHours}` : ""}</dd>
                         <dd className="mt-1 text-slate-400 text-xs">{movie.rating.map(r => (
                             <SmallBadge emoji={r.emoji} text={r.text}/>))}</dd>
                     </div>
