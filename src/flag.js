@@ -1,5 +1,13 @@
 import {useState} from "react"
 import {useStateValue} from "./state"
+const getFlag = (lang) => {
+    switch (lang) {
+        case "de": return "🇩🇪"
+        case "en": return "🇺🇦"
+        case "ua": return "🇺🇸"
+    }
+}
+
 export const Flag = () => {
     const {
         state, setState
@@ -17,13 +25,8 @@ export const Flag = () => {
             aria-expanded="false">
             <span
               class="relative inline-block h-[11px] w-4 overflow-hidden bg-gray-200 leading-[11px] decoration-inherit">
-              {state.language === "de" ? (
-                <span class="inline-block h-[11px] w-4 content-[''] ">🇩🇪</span>)
-                : (
-                    <span class="inline-block h-[11px] w-4 content-[''] ">🇺🇦</span>
-                )
-            }
-              </span>  
+                <span className="inline-block h-[11px] w-4 content-[''] ">{getFlag(state.language)}</span>
+              </span>
             <span class="w-2 pl-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +98,34 @@ export const Flag = () => {
                 </span> : null}
               </a>
             </li>
+              <li><hr className="my-3" /></li>
+              <li>
+                  <a
+                      className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-gray-700 hover:bg-gray-100 active:text-zinc-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-gray-400 dark:text-gray-200 dark:hover:bg-white/30"
+                      href="#"
+                      onClick={() => {
+                          setState(state => ({...state, language: "en"}))
+                          setOpen(false)
+                      }}
+                      data-te-dropdown-item-ref>
+                <span
+                    className="relative mr-2 inline-block h-[11px] w-4 overflow-hidden bg-gray-200 leading-[11px] decoration-inherit">
+                  <span
+                      className="inline-block h-[11px] w-4 content-[''] ">🇺🇸</span>
+                </span>
+                      <span className="mr-4">English</span>
+
+                      {state.language === "en" ? <span
+                          className="inline-block fill-green-600 dark:fill-gray-200 [&>svg]:h-3.5 [&>svg]:w-3.5">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                    <path
+                        d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                  </svg>
+                </span> : null}
+                  </a>
+              </li>
           </ul>
         </div>
     )

@@ -182,13 +182,111 @@ const moviesDe = [
     date: "2.05.2023"
   },
 ]
+
+const moviesEn = [
+  {
+    id: 1,
+    title: "Medicial care from the the department of health",
+    rating: [
+      {
+        emoji: "💊",
+        text: "Medicine"
+      },
+    ],
+    isPinned: true,
+    starRating: 13,
+    date: "23.07.2023"
+  },
+  {
+    id: 2,
+    title: "Free sim-cards by Telekom and Vodafone",
+    isHot: true,
+    rating: [
+      {
+        emoji: "🤝",
+        text: "Networking"
+      },
+      {
+        emoji: "💸",
+        text: "Free"
+      },
+    ],
+    starRating: 53,
+    date: "13.10.2023"
+  },
+  {
+    id: 3,
+    title: "Local language courses",
+    rating: [
+      {
+        emoji: "🇩🇪",
+        text: "Language Course"
+      },
+      {
+        text: "Free",
+        emoji: "💸"
+      },
+    ],
+    starRating: 31,
+    date: "13.09.2023"
+  },
+  {
+    id: 4,
+    title: "Jobs for Ukrainian refugees",
+    rating: [
+      {
+        emoji: "👩‍💼",
+        text: "Work"
+      },
+    ],
+    starRating: 16,
+    date: "2.08.2023"
+  },
+  {
+    id: 5,
+    title: "Free food distribution",
+    rating: [
+      {
+        emoji: "🍕",
+        text: "Groceries"
+      },
+      {
+        emoji: "💸",
+        text: "Free"
+      },
+    ],
+    starRating: 15,
+    date: "2.08.2023"
+  },
+  {
+    id: 6,
+    title: "Central arrival center in exhibition hall 6",
+    rating: [
+      {
+        emoji: "🏠",
+        text: "Habitation"
+      }
+    ],
+    starRating: 7,
+    date: "2.05.2023"
+  },
+]
+
+const getMovies = (lang) => {
+  switch (lang) {
+    case "de": return moviesDe;
+    case "en": return moviesEn;
+    case "ua": return moviesUa
+    default: return moviesDe
+  }
+}
 export const Articles = () => {
     const {
         state, setState
     } = useStateValue()
-      const [filteredArticles, setFilteredArticles] = useState(state.language === "de" ? moviesDe : moviesUa)
+      const [filteredArticles, setFilteredArticles] = useState(getMovies(state.language))
       useEffect(() => {
-        setFilteredArticles((state.language === "de" ? moviesDe : moviesUa)
+        setFilteredArticles((getMovies(state.language))
           .filter(article => state.searchString ?
             article.title.toLocaleLowerCase().includes(state.searchString)
             || article.rating.find(r => r.text.toLocaleLowerCase().includes(state.searchString))
