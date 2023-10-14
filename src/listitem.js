@@ -1,14 +1,23 @@
 import { SmallBadge } from "./badge";
 import VoteButtons from "./vote"
-
+import {useStateValue} from "./state"
 export default function ListItem({ movie }) {
+    const {
+        state, setState
+    } = useStateValue()
     return (
-      <article className="flex items-start space-x-3 p-3">
+      <article
+        className="flex items-start space-x-3 p-3">
         <div className="flex flex-row items-center justify-center h-full">
             <VoteButtons rating={movie.starRating} />
         </div>
         <div className="min-w-0 relative flex-auto">
-          <h2 className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
+          <h2
+            onClick={() => {
+                setState(state => ({...state, showArticle: movie}))
+                console.log(">>>>>>")
+            }}
+          className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
           <dl className="flex flex-wrap text-sm leading-6 font-medium">
             {/*
             <div className="absolute top-0 right-0 flex items-center space-x-1">

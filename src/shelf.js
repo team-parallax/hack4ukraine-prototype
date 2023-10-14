@@ -7,13 +7,13 @@ const Shelf = () => {
   return (
     <div className="relative flex flex-col items-center">
       <div className={`relative transition-max-h duration-300 ease-in-out ${isOpen ? 'max-h-[400px]' : 'max-h-0'}`}>
-        <div className={`h-64 m-1 overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`h-64 m-1 overflow-hidden transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             {categories.map(category => (<Badge text={category.text} emoji={category.emoji}/>))}
           
         </div>
-        <div className="pt-6"></div>
+        <div className="pt-2"></div>
         <button
-          className="absolute bottom-0 left-[45%] bg-slate-300 text-white rounded-full text-lg z-10 transform transition-transform duration-300 ease-in-out"
+          className="absolute bottom-0 left-[45%] bg-slate-300 text-white rounded-full text-lg transform transition-transform duration-300 ease-in-out"
           onClick={() => setIsOpen(!isOpen)}
           style={{ bottom: isOpen ? '0' : '-1rem', transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}
         >

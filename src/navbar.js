@@ -1,11 +1,18 @@
 import {Bell} from "./bell"
 import {Flag} from "./flag"
+import {useStateValue} from "./state"
 export const Navbar = () => {
+  const {
+    state, setState
+} = useStateValue()
     return (
       <nav
         class="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
         <div class="flex w-full flex-wrap items-center justify-between px-3">
           <button
+            onClick={() => {
+              setState(state => ({...state, showArticle:undefined}))
+            }}
             class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
             type="button"
             data-te-collapse-init
