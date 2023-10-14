@@ -16,7 +16,7 @@ export default function ListItem({ movie }) {
             onClick={() => {
                 setState(state => ({...state, showArticle: movie, currentPage: "article"}))
             }}
-          className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
+          className={`font-semibold text-slate-900 pr-10 ${movie.notCurrent ? "line-through" : ""}`}>{movie.title}</h2>
           <dl className="flex flex-wrap text-sm leading-6 font-medium">
             {/*
             <div className="absolute top-0 right-0 flex items-center space-x-1">
@@ -33,6 +33,7 @@ export default function ListItem({ movie }) {
 
             <div className="absolute top-0 right-0 flex items-center space-x-1">
                 { movie.isHot ?"🔥" :""}
+                { movie.notCurrent ?"❄️" :""}
                 { movie.isPinned ?"📌" :""}
             </div>
             {/*

@@ -134,17 +134,17 @@ export const moviesDe = [
         // location: "Ulm/Neu-Ulm"
     },
     {
-        id: 2,
-        title: "Kostenlose SIM-Karten der Telekom und Vodafone",
+        id: 8,
+        title: "Aktuell werden keine weiteren Flüchtlinge aufgenommen",
         isHot: true,
         rating: [
             {
-                emoji: "🤝",
-                text: "Networking"
+                emoji: "🏠",
+                text: "Wohnen"
             },
             {
-                emoji: "💸",
-                text: "Umsonst"
+                emoji: "🚩",
+                text: "Wichtig"
             },
         ],
         starRating: 53,
@@ -223,6 +223,24 @@ export const moviesDe = [
         starRating: 7,
         date: "2.05.2023",
         location: "Stuttgart"
+    },
+    {
+        id: 2,
+        notCurrent: true,
+        title: "Kostenlose SIM-Karten der Telekom und Vodafone",
+        rating: [
+            {
+                emoji: "🤝",
+                text: "Networking"
+            },
+            {
+                emoji: "💸",
+                text: "Umsonst"
+            },
+        ],
+        starRating: 53,
+        date: "13.10.2023",
+        location: "Ulm/Neu-Ulm"
     },
 ]
 
