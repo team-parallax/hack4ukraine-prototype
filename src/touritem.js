@@ -14,7 +14,7 @@ export const Touritem = ({
     const handleToggle = () => setChecked(!checked);
     return (
         <li role="article" className="relative pl-6 ">
-          <span onClick={handleToggle} tabIndex="0" className={`focus:outline-none focus:ring-0 focus:border-transparent select-none cursor-pointer absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full ${checked ? "bg-slate-500" : "bg-emerald-500"} ring-2 ring-white transition ease-in-out duration-300 ${checked ? 'rotate-180' : ''}`}>
+          <span onClick={handleToggle} tabIndex="0" className={`focus:outline-none focus:ring-0 focus:border-transparent select-none cursor-pointer absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full ${checked ? "bg-slate-500" : "bg-blue-500"} ring-2 ring-white transition ease-in-out duration-300 ${checked ? 'rotate-180' : ''}`}>
             {checked ? (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

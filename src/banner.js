@@ -9,7 +9,7 @@ export const Banner = ({
     } = useStateValue()
     return (
         <>
-                <div className={`bg-blue-500 text-white w-full transform transition-all duration-300 ${showBanner ? "p-1" : 'h-0'}`}>
+                <div className={`bg-blue-500 text-white w-full transform transition-all duration-300 ${showBanner ? "p-1  opacity-100" : 'h-0 opacity-0'}`}>
                     <div className="container mx-auto p-2 flex justify-between">
                         <a
                             className={"underline"}

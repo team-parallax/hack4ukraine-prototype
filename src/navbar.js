@@ -92,15 +92,16 @@ export const Navbar = () => {
                         data-te-dropdown-ref
                         data-te-dropdown-alignment="end">
                         <a
-                            class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                            class="border border-2 box-border -mt-[0.05rem] border-blue-500 hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none overflow-hidden rounded-full"
                             href="#"
                             id="dropdownMenuButton2"
                             role="button"
                             data-te-dropdown-toggle-ref
                             aria-expanded="false">
+
                             <img
-                                src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
-                                class="rounded-full"
+                                src="./polina.jpeg"
+                                className="transform scale-150 translate-y-1"
                                 style={{
                                     height: "25px",
                                     width: "25px"

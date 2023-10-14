@@ -3,39 +3,47 @@ import {Touritem} from "./touritem";
 const itemsDe = [
     {
         title: "Bleibe finden",
-        subTitle: "Zuerst brauchst du eine Unterkunft",
+        subTitle: "das Ankunftszentrum",
         icon: "🏠"
     },
     {
         title: `Anmeldung`,
+        subTitle: "die Meldebestätigung",
         icon: "🪪"
     },
     {
         title: `Amt`,
+        subTitle: "das Sozialamt, die Ausländerbehörde für Aufenthaltserlaubnis (der Ausländerpassport)",
         icon: "🏛️"
     },
     {
         title: `Jobcenter`,
+        subTitle: "die Onlineanmeldung verbraten einen Termin",
         icon: "💼"
     },
     {
         title: `Social`,
+        subTitle: "für Menschen über 67 Jahre alt",
         icon: "📝"
     },
     {
         title: `Versicherungen`,
+        subTitle: "AOK, BBK und weitere",
         icon: "🏥 "
     },
     {
         title: `Familienkasse`,
+        subTitle: "Babys und Kindern bis 18 Jahren alt",
         icon: "👨‍👩‍👧‍👦"
     },
     {
         title: `Sprachkurs`,
+        subTitle: "Sprachschulen, BAMF",
         icon: "🗣️"
     },
     {
         title: `Tiere`,
+        subTitle: "die Regeln für Haustiere und Tierärzte.",
         icon: "🐾"
     },
 ]
