@@ -19,7 +19,7 @@ const moviesUa = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        location: "Ulm, Baden-Württemberg"
+        // location: "Ulm/Neu-Ulm"
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ const moviesUa = [
         ],
         starRating: 53,
         date: "13.10.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 3,
@@ -54,7 +54,7 @@ const moviesUa = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 4,
@@ -67,7 +67,7 @@ const moviesUa = [
         ],
         starRating: 16,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 5,
@@ -84,7 +84,7 @@ const moviesUa = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 6,
@@ -97,7 +97,20 @@ const moviesUa = [
         ],
         starRating: 7,
         date: "2.05.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
+    },
+    {
+        id: 7,
+        title: "Щось у Штутгарті",
+        rating: [
+            {
+                emoji: "🏠",
+                text: "Habitation"
+            }
+        ],
+        starRating: 7,
+        date: "2.05.2023",
+        location: "Stuttgart"
     },
 ];
 
@@ -118,7 +131,7 @@ const moviesDe = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        location: "Ulm, Baden-Württemberg"
+        // location: "Ulm/Neu-Ulm"
     },
     {
         id: 2,
@@ -136,7 +149,7 @@ const moviesDe = [
         ],
         starRating: 53,
         date: "13.10.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 3,
@@ -153,7 +166,7 @@ const moviesDe = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 4,
@@ -166,7 +179,7 @@ const moviesDe = [
         ],
         starRating: 16,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 5,
@@ -183,7 +196,7 @@ const moviesDe = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 6,
@@ -196,7 +209,20 @@ const moviesDe = [
         ],
         starRating: 7,
         date: "2.05.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
+    },
+    {
+        id: 7,
+        title: "Irgendwas in Stuttgart",
+        rating: [
+            {
+                emoji: "🏠",
+                text: "Wohnen"
+            }
+        ],
+        starRating: 7,
+        date: "2.05.2023",
+        location: "Stuttgart"
     },
 ]
 
@@ -213,7 +239,7 @@ const moviesEn = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        location: "Ulm, Baden-Württemberg"
+        // location: "Ulm/Neu-Ulm"
     },
     {
         id: 2,
@@ -231,7 +257,7 @@ const moviesEn = [
         ],
         starRating: 53,
         date: "13.10.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 3,
@@ -248,7 +274,7 @@ const moviesEn = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 4,
@@ -261,7 +287,7 @@ const moviesEn = [
         ],
         starRating: 16,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 5,
@@ -278,7 +304,7 @@ const moviesEn = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
     },
     {
         id: 6,
@@ -291,7 +317,20 @@ const moviesEn = [
         ],
         starRating: 7,
         date: "2.05.2023",
-        location: "Ulm, Baden-Württemberg"
+        location: "Ulm/Neu-Ulm"
+    },
+    {
+        id: 7,
+        title: "Something in Stuttgart",
+        rating: [
+            {
+                emoji: "🏠",
+                text: "Habitation"
+            }
+        ],
+        starRating: 7,
+        date: "2.05.2023",
+        location: "Stuttgart"
     },
 ]
 
@@ -317,8 +356,9 @@ export const Articles = () => {
             .filter(article => state.searchString ?
                 article.title.toLocaleLowerCase().includes(state.searchString)
                 || article.rating.find(r => r.text.toLocaleLowerCase().includes(state.searchString))
-                : true))
-    }, [state.searchString, state.language])
+                : true)
+            .filter(a => a.location ? a.location === state.location : true))
+    }, [state.searchString, state.language, state.location])
     return (
         <List>
             {filteredArticles
