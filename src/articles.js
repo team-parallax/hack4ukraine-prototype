@@ -20,7 +20,9 @@ export const moviesUa = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        // location: "Ulm/Neu-Ulm",
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr",
         comments: [
             {
                 id: 1,
@@ -86,8 +88,7 @@ export const moviesUa = [
             },
         ],
         starRating: 16,
-        date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        date: "2.08.2023"
     },
     {
         id: 5,
@@ -123,7 +124,7 @@ export const moviesUa = [
     },
     {
         id: 7,
-        title: "Щось у Штутгарті",
+        title: "блошиний ринок",
         rating: [
             {
                 emoji: "🏠",
@@ -153,10 +154,9 @@ export const moviesDe = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        location: "Ulm/Neu-Ulm",
         address: "Münsterplatz 123",
         openingHours: "8:00 - 12:00 Uhr",
-        // location: "Ulm/Neu-Ulm",
+        location: "Ulm/Neu-Ulm",
         comments: [
             {
                 id: 1,
@@ -222,8 +222,7 @@ export const moviesDe = [
             },
         ],
         starRating: 16,
-        date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        date: "2.08.2023"
     },
     {
         id: 5,
@@ -259,7 +258,7 @@ export const moviesDe = [
     },
     {
         id: 7,
-        title: "Irgendwas in Stuttgart",
+        title: "Flohmarkt in Stuttgart",
         rating: [
             {
                 emoji: "🏠",
@@ -371,8 +370,7 @@ export const moviesEn = [
             },
         ],
         starRating: 16,
-        date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        date: "2.08.2023"
     },
     {
         id: 5,
@@ -408,7 +406,7 @@ export const moviesEn = [
     },
     {
         id: 7,
-        title: "Something in Stuttgart",
+        title: "Flea market in Stuttgart",
         rating: [
             {
                 emoji: "🏠",
