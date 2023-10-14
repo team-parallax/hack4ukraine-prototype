@@ -37,12 +37,11 @@ export const Article = ({article}) => {
                                         d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z"/>
                                     <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
                                 </svg>
-                                {article.location}
+                                {article.location}<br/>{article.address ?? ""} {article.openingHours ? `, ${article.openingHours}` : ""}
                             </dd>
                         </>
                     )
                 }
-
             </dl>
             <div className="px-3">
                 <div

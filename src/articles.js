@@ -54,7 +54,9 @@ export const moviesUa = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,
@@ -84,7 +86,9 @@ export const moviesUa = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr"
     },
     {
         id: 6,
@@ -166,7 +170,9 @@ export const moviesDe = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,
@@ -196,7 +202,9 @@ export const moviesDe = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr"
     },
     {
         id: 6,
@@ -247,7 +255,7 @@ export const moviesDe = [
 export const moviesEn = [
     {
         id: 1,
-        title: "Medicial care from the the department of health",
+        title: "Medical care from the the department of health",
         rating: [
             {
                 emoji: "💊",
@@ -292,7 +300,9 @@ export const moviesEn = [
         ],
         starRating: 31,
         date: "13.09.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Augsburger Str. 12",
+        openingHours: "15:00 - 21:00 Uhr"
     },
     {
         id: 4,
@@ -322,7 +332,9 @@ export const moviesEn = [
         ],
         starRating: 15,
         date: "2.08.2023",
-        location: "Ulm/Neu-Ulm"
+        location: "Ulm/Neu-Ulm",
+        address: "Münsterplatz 123",
+        openingHours: "8:00 - 12:00 Uhr"
     },
     {
         id: 6,

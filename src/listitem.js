@@ -1,4 +1,4 @@
-import { SmallBadge } from "./badge";
+import {SmallBadge} from "./badge";
 import VoteButtons from "./vote"
 import {useStateValue} from "./state"
 export default function ListItem({ movie }) {
@@ -43,16 +43,18 @@ export default function ListItem({ movie }) {
                 </span>
             </div>
             */}
-            {/*
+                    {/*
             <div className="flex-none w-full pt-1 pb-2 font-normal">
 
             </div>
             */}
-            <div className="flex flex-wrap mt-2">
-                <dd className="text-slate-400 text-xs">{movie.date}</dd> {movie.rating.map(r => (<SmallBadge emoji={r.emoji} text={r.text}/>))}
+                    <div className="flex flex-col flex-wrap mt-1">
+                        <dd className="text-slate-400 text-xs">{movie.location ? `${movie.location}, ` : ""}{movie.date}<br/>{movie.address ? `${movie.address}`: ""}{movie.openingHours ? `, ${movie.openingHours}` : ""}</dd>
+                        <dd className="mt-1 text-slate-400 text-xs">{movie.rating.map(r => (
+                            <SmallBadge emoji={r.emoji} text={r.text}/>))}</dd>
+                    </div>
+                </dl>
             </div>
-          </dl>
-        </div>
-      </article>
+        </article>
     )
-  }
+}
