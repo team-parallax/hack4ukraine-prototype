@@ -32,6 +32,11 @@ export const moviesUa = [
                 text: faker.lorem.lines(1),
                 userName: faker.internet.userName()
             },
+            {
+                id: 3,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
         ]
     },
     {
@@ -157,6 +162,11 @@ export const moviesDe = [
             },
             {
                 id: 2,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+            {
+                id: 3,
                 text: faker.lorem.lines(1),
                 userName: faker.internet.userName()
             },
@@ -299,6 +309,11 @@ export const moviesEn = [
             },
             {
                 id: 2,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+            {
+                id: 3,
                 text: faker.lorem.lines(1),
                 userName: faker.internet.userName()
             },
