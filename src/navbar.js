@@ -11,7 +11,7 @@ export const Navbar = () => {
         <div class="flex w-full flex-wrap items-center justify-between px-3">
           <button
             onClick={() => {
-              setState(state => ({...state, showArticle:undefined}))
+              setState(state => ({...state, showArticle:undefined, currentPage: "articles"}))
             }}
             class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
             type="button"
@@ -33,7 +33,7 @@ export const Navbar = () => {
               </svg>
             </span>
           </button>
-      
+
           <div
             class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
             id="navbarSupportedContent12"
@@ -78,12 +78,12 @@ export const Navbar = () => {
               </li>
             </ul>
           </div>
-      
+
           <div class="relative flex items-center">
-      
+
             <Flag/>
             <Bell/>
-      
+
             <div
               class="relative"
               data-te-dropdown-ref

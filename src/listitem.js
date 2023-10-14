@@ -14,8 +14,7 @@ export default function ListItem({ movie }) {
         <div className="min-w-0 relative flex-auto">
           <h2
             onClick={() => {
-                setState(state => ({...state, showArticle: movie}))
-                console.log(">>>>>>")
+                setState(state => ({...state, showArticle: movie, currentPage: "article"}))
             }}
           className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
           <dl className="flex flex-wrap text-sm leading-6 font-medium">
@@ -30,8 +29,8 @@ export default function ListItem({ movie }) {
               <dd>{movie.starRating}</dd>
             </div>
             */}
-            
-            
+
+
             <div className="absolute top-0 right-0 flex items-center space-x-1">
                 { movie.isHot ?"🔥" :""}
                 { movie.isPinned ?"📌" :""}
@@ -45,7 +44,7 @@ export default function ListItem({ movie }) {
             */}
             {/*
             <div className="flex-none w-full pt-1 pb-2 font-normal">
-              
+
             </div>
             */}
             <div className="flex flex-wrap mt-2">

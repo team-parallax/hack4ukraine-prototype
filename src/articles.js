@@ -5,7 +5,7 @@ import Shelf from "./shelf"
 import List from "./list"
 import ListItem from "./listitem"
 import {StateProvider, useStateValue } from "./state"
-const moviesUa = [
+export const moviesUa = [
   {
     id: 1,
     title: "Інформація про медичне забезпечення від Федерального міністерства охорони здоров'я",
@@ -23,7 +23,7 @@ const moviesUa = [
     id: 2,
     title: "Безкоштовні SIM-карти від Telekom та Vodafone",
     isHot: true,
-    rating: [  
+    rating: [
       {
         emoji: "🤝",
         text: "Мережі"
@@ -39,7 +39,7 @@ const moviesUa = [
   {
     id: 3,
     title: "Мовні курси на місці",
-    rating: [  
+    rating: [
       {
         emoji: "🇩🇪",
         text: "Мовний курс"
@@ -55,7 +55,7 @@ const moviesUa = [
   {
     id: 4,
     title: "Робота для українських біженців",
-    rating: [  
+    rating: [
       {
         emoji: "👩‍💼",
         text: "Робота"
@@ -67,7 +67,7 @@ const moviesUa = [
   {
     id: 5,
     title: "Безкоштовна видача їжі",
-    rating: [  
+    rating: [
       {
         emoji: "🍕",
         text: "Продукти харчування"
@@ -83,7 +83,7 @@ const moviesUa = [
   {
     id: 6,
     title: "Центральний пункт прибуття у Виставковому павільйоні 6",
-    rating: [  
+    rating: [
       {
         emoji: "🏠",
         text: "Проживання"
@@ -94,7 +94,7 @@ const moviesUa = [
   },
 ];
 
-const moviesDe = [
+export const moviesDe = [
   {
     id: 1,
     title: "Infos zur medizinischen Versorgung vom Bundesgesundheitsministerium",
@@ -112,7 +112,7 @@ const moviesDe = [
     id: 2,
     title: "Kostenlose SIM-Karten der Telekom und Vodafone",
     isHot: true,
-    rating: [  
+    rating: [
       {
         emoji: "🤝",
         text: "Networking"
@@ -128,7 +128,7 @@ const moviesDe = [
   {
     id: 3,
     title: "Sprachkurse vor Ort",
-    rating: [  
+    rating: [
       {
         emoji: "🇩🇪",
         text: "Sprachkurs"
@@ -144,7 +144,7 @@ const moviesDe = [
   {
     id: 4,
     title: "Jobs für ukrainische Geflüchtete",
-    rating: [  
+    rating: [
       {
         emoji: "👩‍💼",
         text: "Arbeit"
@@ -156,7 +156,7 @@ const moviesDe = [
   {
     id: 5,
     title: "Kostenlose Essensausgabe",
-    rating: [  
+    rating: [
       {
         emoji: "🍕",
         text: "Lebensmittel"
@@ -172,7 +172,7 @@ const moviesDe = [
   {
     id: 6,
     title: "Zentrales Ankunftszentrum in der Messehalle 6",
-    rating: [  
+    rating: [
       {
         emoji: "🏠",
         text: "Wohnen"
@@ -193,7 +193,7 @@ export const Articles = () => {
             article.title.toLocaleLowerCase().includes(state.searchString)
             || article.rating.find(r => r.text.toLocaleLowerCase().includes(state.searchString))
           : true))
-      }, [state.searchString, state.language]) 
+      }, [state.searchString, state.language])
     return (
         <List>
             {filteredArticles
