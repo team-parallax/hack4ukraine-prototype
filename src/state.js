@@ -1,10 +1,7 @@
 import React, { createContext, useReducer, useContext, useState } from 'react';
 
 const StateContext = createContext();
-/**
- * currentPage: articles|tour|article
- */
-const initialState = { searchString: "", labelEmoji: "", language: "de", showArticle: undefined, currentPage: "articles" };
+const initialState = { searchString: "", labelEmoji: "", language: "de", location: "Ulm/Neu-Ulm", showArticle: undefined, currentPage: "articles" };
 
 export const StateProvider = ({ children }) => {
     const [state, setState] = useState(initialState);
