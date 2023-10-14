@@ -1,26 +1,24 @@
 import {SmallBadge} from "./badge";
 import VoteButtons from "./vote"
 import {useStateValue} from "./state"
-import {ar} from "@faker-js/faker";
-
-export default function ListItem({movie}) {
+export default function ListItem({ movie }) {
     const {
         state, setState
     } = useStateValue()
     return (
-        <article
-            className="flex items-start space-x-3 p-3">
-            <div className="flex flex-row items-center justify-center h-full">
-                <VoteButtons rating={movie.starRating}/>
-            </div>
-            <div className="min-w-0 relative flex-auto">
-                <h2
-                    onClick={() => {
-                        setState(state => ({...state, showArticle: movie, currentPage: "article"}))
-                    }}
-                    className="font-semibold text-slate-900 pr-10">{movie.title}</h2>
-                <dl className="flex flex-wrap text-sm leading-6 font-medium">
-                    {/*
+      <article
+        className="flex items-start space-x-3 p-3">
+        <div className="flex flex-row items-center justify-center h-full">
+            <VoteButtons rating={movie.starRating} />
+        </div>
+        <div className="min-w-0 relative flex-auto">
+          <h2
+            onClick={() => {
+                setState(state => ({...state, showArticle: movie, currentPage: "article"}))
+            }}
+          className={`font-semibold text-slate-900 pr-10 ${movie.notCurrent ? "line-through" : ""}`}>{movie.title}</h2>
+          <dl className="flex flex-wrap text-sm leading-6 font-medium">
+            {/*
             <div className="absolute top-0 right-0 flex items-center space-x-1">
               <dt className="text-sky-500">
                 <span className="sr-only">Star rating</span>
@@ -33,11 +31,12 @@ export default function ListItem({movie}) {
             */}
 
 
-                    <div className="absolute top-0 right-0 flex items-center space-x-1">
-                        {movie.isHot ? "🔥" : ""}
-                        {movie.isPinned ? "📌" : ""}
-                    </div>
-                    {/*
+            <div className="absolute top-0 right-0 flex items-center space-x-1">
+                { movie.isHot ?"🔥" :""}
+                { movie.notCurrent ?"❄️" :""}
+                { movie.isPinned ?"📌" :""}
+            </div>
+            {/*
             <div className=" mb-2">
                 <span  className="text-slate-400 text-sm leading-1">
                     There are many variations of passages of Lorem Ipsum available.

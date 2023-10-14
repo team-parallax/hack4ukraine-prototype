@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {moviesDe} from "./articles";
 import {useStateValue} from "./state";
-import {SmallBadge} from "./badge";
 export const Touritem = ({
     title,
     subTitle,
