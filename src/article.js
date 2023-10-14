@@ -1,4 +1,5 @@
 export const Article = ({article}) => {
+    console.log(article)
     return (
             <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
                 <div class="relative p-3 col-start-1 row-start-1 flex flex-col rounded-lg">
