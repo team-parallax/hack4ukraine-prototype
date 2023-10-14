@@ -52,6 +52,32 @@ export const Article = ({article}) => {
                     {faker.lorem.lines(20)}
                 </p>
             </div>
+            <hr/>
+            <div class="mt-1">
+                <p class="ml-2 mb-1">Diskussion:</p>
+                {
+                    article.comments?.map(comment => (
+                        <div class="p-2 ml-3 mr-3 border border-solid">
+                            <div class={"flex flex-row"}>
+                                <img
+                                    src={`https://tecdn.b-cdn.net/img/new/avatars/${comment.id}.jpg`}
+                                    className="rounded-full mr-1"
+                                    style={{
+                                        height: "25px",
+                                        width: "25px"
+                                    }}
+                                    alt=""
+                                    loading="lazy"/>
+                                <p style={{color: "rgb(59 130 246)"}}>@{comment.userName}:</p>
+                            </div>
+                            <p>{comment.text}</p>
+                        </div>
+                    ))
+                }
+                <button class="ml-3 mr-3 mt-1 mb-1 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                    Kommentar hinzufügen
+                </button>
+            </div>
         </div>
     )
-}
+};

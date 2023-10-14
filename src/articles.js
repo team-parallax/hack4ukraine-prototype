@@ -3,6 +3,7 @@ import {Navbar} from "./navbar"
 import {Search} from './search';
 import Shelf from "./shelf"
 import List from "./list"
+import {faker} from "@faker-js/faker"
 import ListItem from "./listitem"
 import {StateProvider, useStateValue} from "./state"
 
@@ -19,7 +20,19 @@ export const moviesUa = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        // location: "Ulm/Neu-Ulm"
+        // location: "Ulm/Neu-Ulm",
+        comments: [
+            {
+                id: 1,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+            {
+                id: 2,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+        ]
     },
     {
         id: 2,
@@ -135,7 +148,19 @@ export const moviesDe = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        // location: "Ulm/Neu-Ulm"
+        // location: "Ulm/Neu-Ulm",
+        comments: [
+            {
+                id: 1,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+            {
+                id: 2,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+        ]
     },
     {
         id: 8,
@@ -265,7 +290,19 @@ export const moviesEn = [
         isPinned: true,
         starRating: 13,
         date: "23.07.2023",
-        // location: "Ulm/Neu-Ulm"
+        // location: "Ulm/Neu-Ulm",
+        comments: [
+            {
+                id: 1,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+            {
+                id: 2,
+                text: faker.lorem.lines(1),
+                userName: faker.internet.userName()
+            },
+        ]
     },
     {
         id: 2,
