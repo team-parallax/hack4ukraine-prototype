@@ -1,11 +1,11 @@
 export const categories = [
     {
       emoji: "💊",
-      text: "Medicine"
+      text: "Medizin"
     },
     {
       emoji: "🏫",
-      text: "School"
+      text: "Schule"
     },
     {
       emoji: "🏠",
@@ -13,23 +13,23 @@ export const categories = [
     },
     {
       emoji: "👩‍💼",
-      text: "Work"
+      text: "Arbeit"
     },
     {
       emoji: "👨‍👩‍👦",
-      text: "Family/Kids"
+      text: "Familie"
     },
     {
       emoji: "📑",
-      text: "Bureaucracy"
+      text: "Bürokratie"
     },
     {
       emoji: "🏦",
-      text: "Banking/Finance"
+      text: "Finanzen"
     },
     {
       emoji: "🛂",
-      text: "Visa Process"
+      text: "Visa"
     },
     {
       emoji: "🗺️",
@@ -49,15 +49,15 @@ export const categories = [
     },
     {
       emoji: "💸",
-      text: "Free"
+      text: "Umsonst"
     },
     {
       emoji: "🗣️",
-      text: "Language"
+      text: "Sprache"
     },
     {
       emoji: "⚖️",
-      text: "Legal Services"
+      text: "Juristik"
     }
   ];
   
